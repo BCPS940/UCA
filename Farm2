@@ -72,12 +72,13 @@ end
 
 
 
+local CharacterSelec = "Reigen Arataka"
 while wait() do
     pcall(function()
     if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
         wait(7)
         local Char = "Select Character"
-        local Char2 = "Reigen Arataka"
+        local Char2 = CharacterSelec
         local Event = game:GetService("ReplicatedStorage").Events.RecursiveInfo
         Event:FireServer(Char, Char2)
         wait(3)
