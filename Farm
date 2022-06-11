@@ -1,3 +1,4 @@
+if getgenv().TP then
 while getgenv().TP do
 pcall(function()
 wait()
@@ -10,8 +11,9 @@ for i,v in pairs(game.Workspace.Entities:GetChildren()) do
 end
 end)
 end
+end
 
-wait(0.5)
+if getgenv().bringmob then
 while getgenv().bringmob do wait()
 pcall(function()
 for i,v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
@@ -34,8 +36,9 @@ end
 end
 end)
 end
+end
 
-wait(0.5)
+if getgenv().AutoHit then
 while getgenv().AutoHit do
 pcall(function()
 wait(0.2)
@@ -44,8 +47,9 @@ local Event = game:GetService("ReplicatedStorage").Events.InputKey
 Event:FireServer(A_1)
 end)
 end
+end
 
-wait(0.5)
+if getgenv().AutoSkill then
 while getgenv().AutoSkill do
 pcall(function()
 wait(0.2)
@@ -58,5 +62,12 @@ Event:FireServer(G)
 local H = "H"
 local Event = game:GetService("ReplicatedStorage").Events.InputKey
 Event:FireServer(H)
+local T = "T"
+local Event = game:GetService("ReplicatedStorage").Events.InputKey
+Event:FireServer(T)
+local R = "R"
+local Event = game:GetService("ReplicatedStorage").Events.InputKey
+Event:FireServer(R)
 end)
+end
 end
