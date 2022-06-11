@@ -1,0 +1,62 @@
+pcall(function()
+wait()
+local PS = game:GetService("Players")
+
+for i,v in pairs(game.Workspace.Entities:GetChildren()) do
+   if v.Name == "Unanchored Dummy" and v.Humanoid.Health > 0 then
+       PS.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,4)
+   end
+end
+end)
+
+pcall(function()
+for i,v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+for x,y in pairs(game:GetService("Workspace").Entities:GetChildren()) do
+if v.Name == "Unanchored Dummy" then
+    if y.Name == "Unanchored Dummy" then
+   v.HumanoidRootPart.CFrame = y.HumanoidRootPart.CFrame
+   v.HumanoidRootPart.CanCollide = false
+   y.HumanoidRootPart.CanCollide = false
+   v.Humanoid.WalkSpeed = 0
+   y.Humanoid.WalkSpeed = 0
+   v.Humanoid.JumpPower = 0
+   y.Humanoid.JumpPower = 0
+   if sethiddenproperty then
+     sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+end
+end
+end
+end
+end
+end)
+
+if getgenv().AutoHit then
+while getgenv().AutoHit do
+pcall(function()
+wait(0.2)
+local A_1 = "LMB"
+local Event = game:GetService("ReplicatedStorage").Events.InputKey
+Event:FireServer(A_1)
+end)
+end
+end
+
+
+pcall(function()
+wait(0.2)
+local E = "E"
+local Event = game:GetService("ReplicatedStorage").Events.InputKey
+Event:FireServer(E)
+local G = "G"
+local Event = game:GetService("ReplicatedStorage").Events.InputKey
+Event:FireServer(G)
+local H = "H"
+local Event = game:GetService("ReplicatedStorage").Events.InputKey
+Event:FireServer(H)
+local T = "T"
+local Event = game:GetService("ReplicatedStorage").Events.InputKey
+Event:FireServer(T)
+local R = "R"
+local Event = game:GetService("ReplicatedStorage").Events.InputKey
+Event:FireServer(R)
+end)
