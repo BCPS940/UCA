@@ -6,7 +6,7 @@ local PS = game:GetService("Players")
 
 for i,v in pairs(game.Workspace.Entities:GetChildren()) do
    if v.Name == "Unanchored Dummy" and v.Humanoid.Health > 0 then
-       PS.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,4)
+       PS.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
    end
 end
 end)
