@@ -56,7 +56,7 @@ local H = "H"
 local Event = game:GetService("ReplicatedStorage").Events.InputKey
 Event:FireServer(H)
 local T = "T"
-local Event = game:GetService("ReplicatedStorage").Events.while wait() doInputKey
+local Event = game:GetService("ReplicatedStorage").Events.InputKey
 Event:FireServer(T)
 local R = "R"
 local Event = game:GetService("ReplicatedStorage").Events.InputKey
