@@ -1,5 +1,5 @@
-if getgenv().TP then
-while getgenv().TP do
+if _G.TP then
+while _G.TP do
 pcall(function()
 wait()
 local PS = game:GetService("Players")
@@ -13,8 +13,8 @@ end)
 end
 end
 
-if getgenv().bringmob then
-while getgenv().bringmob do wait()
+if _G.Bringmob then
+while _G.Bringmob do wait()
 pcall(function()
 for i,v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 for x,y in pairs(game:GetService("Workspace").Entities:GetChildren()) do
@@ -38,8 +38,8 @@ end)
 end
 end
 
-if getgenv().AutoHit then
-while getgenv().AutoHit do
+if _G.AutoHit then
+while _G.AutoHit do
 pcall(function()
 wait(0.2)
 local A_1 = "LMB"
@@ -49,8 +49,8 @@ end)
 end
 end
 
-if getgenv().AutoSkill then
-while getgenv().AutoSkill do
+if _G.AutoSkill then
+while _G.AutoSkill do
 pcall(function()
 wait(0.2)
 local E = "E"
@@ -68,6 +68,24 @@ Event:FireServer(T)
 local R = "R"
 local Event = game:GetService("ReplicatedStorage").Events.InputKey
 Event:FireServer(R)
+end)
+end
+end
+
+if _G.AutoSelectCharacter then
+while _G.AutoSelectCharacter do
+    pcall(function()
+    if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+        wait(7)
+        local Char = "Select Character"
+        local Char2 = "Reigen Arataka"
+        local Event = game:GetService("ReplicatedStorage").Events.RecursiveInfo
+        Event:FireServer(Char, Char2)
+        wait(3)
+        local One = "One"
+        local Event = game:GetService("ReplicatedStorage").Events.InputKey
+        Event:FireServer(One)
+    end
 end)
 end
 end
