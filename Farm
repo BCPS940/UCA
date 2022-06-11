@@ -1,4 +1,4 @@
-if _G.TP then
+if _G.TP == true then
 while _G.TP do
 pcall(function()
 wait()
@@ -13,7 +13,7 @@ end)
 end
 end
 
-if _G.Bringmob then
+if _G.Bringmob == true then
 while _G.Bringmob do wait()
 pcall(function()
 for i,v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
@@ -38,7 +38,7 @@ end)
 end
 end
 
-if _G.AutoHit then
+if _G.AutoHit == true then
 while _G.AutoHit do
 pcall(function()
 wait(0.2)
@@ -49,7 +49,7 @@ end)
 end
 end
 
-if _G.AutoSkill then
+if _G.AutoSkill == true then
 while _G.AutoSkill do
 pcall(function()
 wait(0.2)
@@ -72,7 +72,7 @@ end)
 end
 end
 
-if _G.AutoSelectCharacter then
+if _G.AutoSelectCharacter == true then
 while _G.AutoSelectCharacter do
     pcall(function()
     if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
