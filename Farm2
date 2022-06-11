@@ -69,3 +69,21 @@ local Event = game:GetService("ReplicatedStorage").Events.InputKey
 Event:FireServer(R)
 end)
 end
+
+
+
+while wait() do
+    pcall(function()
+    if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+        wait(7)
+        local Char = "Select Character"
+        local Char2 = "Reigen Arataka"
+        local Event = game:GetService("ReplicatedStorage").Events.RecursiveInfo
+        Event:FireServer(Char, Char2)
+        wait(3)
+        local One = "One"
+        local Event = game:GetService("ReplicatedStorage").Events.InputKey
+        Event:FireServer(One)
+    end
+end)
+end
