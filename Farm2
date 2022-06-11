@@ -1,3 +1,4 @@
+while wait() do
 pcall(function()
 wait()
 local PS = game:GetService("Players")
@@ -8,7 +9,9 @@ for i,v in pairs(game.Workspace.Entities:GetChildren()) do
    end
 end
 end)
+end
 
+while wait() do
 pcall(function()
 for i,v in pairs(game:GetService("Workspace").Entities:GetChildren()) do
 for x,y in pairs(game:GetService("Workspace").Entities:GetChildren()) do
@@ -29,9 +32,9 @@ end
 end
 end
 end)
+end
 
-if getgenv().AutoHit then
-while getgenv().AutoHit do
+while wait() do
 pcall(function()
 wait(0.2)
 local A_1 = "LMB"
@@ -39,9 +42,8 @@ local Event = game:GetService("ReplicatedStorage").Events.InputKey
 Event:FireServer(A_1)
 end)
 end
-end
 
-
+while wait() do
 pcall(function()
 wait(0.2)
 local E = "E"
@@ -54,9 +56,10 @@ local H = "H"
 local Event = game:GetService("ReplicatedStorage").Events.InputKey
 Event:FireServer(H)
 local T = "T"
-local Event = game:GetService("ReplicatedStorage").Events.InputKey
+local Event = game:GetService("ReplicatedStorage").Events.while wait() doInputKey
 Event:FireServer(T)
 local R = "R"
 local Event = game:GetService("ReplicatedStorage").Events.InputKey
 Event:FireServer(R)
 end)
+end
